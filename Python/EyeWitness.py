@@ -29,6 +29,7 @@ from multiprocessing import Manager
 from multiprocessing import Process
 from multiprocessing import current_process
 try:
+    os.environ['PYVIRTUALDISPLAY_DISPLAYFD'] = '0'
     from pyvirtualdisplay import Display
 except ImportError:
     print('[*] pyvirtualdisplay not found.')
